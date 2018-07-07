@@ -1,0 +1,25 @@
+{
+  "name": "html_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeanidHreska/html_css.git"
+  },
+  "author": "Leanid Hreska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeanidHreska/html_css/issues"
+  },
+  "homepage": "https://github.com/LeanidHreska/html_css#readme",
+  "devDependencies": {
+    "browser-sync": "2.24.5",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.1",
+    "gulp-image": "^4.3.0",
+    "gulp-watch": "5.0.0"
+  },
+  "dependencies": {}
+}
