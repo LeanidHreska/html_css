@@ -57,10 +57,22 @@
 
 .navigation__menu {
   display: inline-flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
 }
 
 .navigation__button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  transition: color .2s ease-in-out, border-bottom .2s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
 
+.navigation__button:hover {
+  color: #E74C3C;
+  cursor: pointer;
+  border-bottom: 2px solid #E74C3C;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
