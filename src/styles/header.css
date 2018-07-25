@@ -1,29 +1,52 @@
 .header {
   background-image: url('images/header__background.png');
   height: 991px;
+  position: relative;
 }
 
 .header__background-blackout {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
   height: inherit;
-  opacity: 0.8;
   position: relative;
   overflow: hidden;
 }
 
 .header__left-side-corner, .header__right-side-corner {
   position: absolute;
-  bottom: -17px;
+  bottom: 0;
   width: 50%;
   height: 0;
   border-bottom: 124px solid #fff; 
 }
 
 .header__left-side-corner {
-	border-right: 50vw solid transparent;
+  border-right: 50vw solid transparent;
 }
 
 .header__right-side-corner { 
   right: 0;
-	border-left: 50vw solid transparent;
+  border-left: 50vw solid transparent;
+}
+
+.header__anchor {
+  height: 50px;
+  width: 50px;
+  background-color: #f4f5f9;
+  position: absolute;
+  bottom: -25px;
+  left: calc(50vw - 25px);
+  background-clip: padding-box;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e74c3c;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out; 
+}
+
+.header__anchor:hover {
+  color: #fff;
+  background-color: #e74c3c;
+  cursor: pointer;
 }

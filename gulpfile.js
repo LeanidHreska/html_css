@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
   
 gulp.task('buildStyles', function () {
-  return gulp.src('src/styles/*.css')
+  return gulp.src(['src/normalize.css', 'src/styles/*.css'])
     .pipe(concat('style.css'))
     .pipe(gulp.dest('build'))
     .pipe(browserSync.reload({stream:true}));
