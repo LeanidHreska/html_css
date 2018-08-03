@@ -3,11 +3,15 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
     browserSync = require('browser-sync').create();
     image = require('gulp-image');
+    stylus = require('gulp-stylus');
+    plumber = require('gulp-plumber');
   
 
   
 gulp.task('buildStyles', function () {
-  return gulp.src(['src/normalize.css', 'src/styles/*.css'])
+  return gulp.src(['src/normalize.css', 'src/styles/*.css', 'src/styles/*.styl'])
+    .pipe(plumber())  
+    .pipe(stylus())
     .pipe(concat('style.css'))
     .pipe(gulp.dest('build'))
     .pipe(browserSync.reload({stream:true}));
@@ -21,7 +25,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('image', function () {
-  gulp.src('./src/images/*.png')
+  gulp.src('./src/images/*')
     .pipe(image())
     .pipe(gulp.dest('build/images'));
 });
