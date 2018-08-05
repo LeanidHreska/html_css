@@ -459,6 +459,9 @@ template {
 .header__navigation {
   margin: 40px auto 0;
 }
+.header__slider {
+  margin-top: 205px;
+}
 @media screen and (max-width: 1200px) {
   .header__anchor {
     font-size: 16px;
@@ -620,7 +623,6 @@ template {
   text-align: center;
   display: flex;
   justify-content: space-around;
-  margin-top: 205px;
   align-items: center;
 }
 .slider__arrow {
