@@ -1,0 +1,78 @@
+@import "../main.styl"
+
+$transition = .3s ease-in-out
+
+.who-we-are 
+  min-height: 440px
+  width: $page-width
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  margin: 0 auto
+
+  /* bugfix due to problem with min-height and flexbox in IE */
+  &:after
+    content: ''
+    min-height: inherit
+    font-size: 0
+
+.item
+  width: 22%
+  text-align: center
+
+  &__icon-box
+    display: inline-block
+    height: 70px
+    width: 70px
+    border: 1px solid $color-gray-light
+    color: $color-red
+    font-size: $h4-font-size
+    margin-bottom: 30px
+    transition: $transition
+    line-height: 70px
+
+  &__icon
+    transition: $transition
+
+  &__title
+    font-family: $font-family-open-sans
+    font-size: $h4-font-size
+    text-transform: uppercase
+    color: $color-dark-gray
+    transition: color $transition
+
+  &__divider
+    height: 1px
+    background-color: $color-gray
+    width: 40px
+    margin: 15px auto
+
+  &__description
+    font-family: $font-family-sans-pro
+    font-size: $h6-font-size
+    color: $color-gray
+
+  &:hover
+    .item__title
+      color: $color-red
+
+    .item__icon-box
+      border-color: $color-red
+      transform: rotate(-45deg)
+    
+    .item__icon
+      transform: rotate(45deg)
+
+@media screen and (max-width: $sm)
+  .who-we-are
+    width: 90%
+
+@media screen and (max-width: $xs)
+  .who-we-are
+    margin: 30px auto
+    min-height: 0
+  .item
+    width: 100%
+    margin: 20px 0
+    

@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
   
 gulp.task('buildStyles', function () {
-  return gulp.src(['src/normalize.css', 'src/styles/*.css', 'src/styles/*.styl'])
+  return gulp.src(['src/normalize.css', 'src/**/*.styl', 'src/**/*.css' ])
     .pipe(plumber())  
     .pipe(stylus())
     .pipe(concat('style.css'))

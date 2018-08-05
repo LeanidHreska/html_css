@@ -1,0 +1,70 @@
+@import "../main.styl"
+
+$anchor-size = 75px
+$anchor-small-size = 50px
+
+.header
+  background-image: url('images/header__background.jpeg')
+  background-size: cover
+  height: 991px
+  position: relative
+
+  &__background-blackout
+    background-color: rgba(0, 0, 0, 0.7)
+    height: inherit
+    overflow: hidden
+
+  &__left-side-corner, &__right-side-corner
+    position: absolute
+    bottom: 0
+    border-bottom: 124px solid $color-white
+
+
+  &__left-side-corner
+    border-right: 50vw solid transparent
+
+  &__right-side-corner 
+    right: 0
+    border-left: 50vw solid transparent
+
+  &__anchor
+    height: $anchor-size 
+    width: $anchor-size 
+    background-color: $color-gray-light
+    position: absolute
+    bottom: -($anchor-size / 2)
+    left: "calc(50vw - (%s / 2))" % $anchor-size
+    background-clip: padding-box
+    border: 2px solid rgba(255, 255, 255, 0.3)
+    border-radius: 50%
+    color: $color-red
+    transition: color .2s ease-in-out, background-color .2s ease-in-out
+    font-size: $h3-font-size
+    text-align: center
+    line-height: $anchor-size 
+
+  &__anchor:hover
+    color: $color-white
+    background-color: $color-red
+    cursor: pointer
+  
+  &__navigation
+    margin: 40px auto 0
+
+@media screen and (max-width: $md)
+  .header
+
+    &__anchor
+      font-size: $h5-font-size
+      width: $anchor-small-size 
+      height: $anchor-small-size 
+      bottom: -($anchor-small-size / 2)
+      left: "calc(50vw - (%s / 2))" % $anchor-small-size
+      line-height: $anchor-small-size
+
+@media screen and (max-width: $xs)
+  .header
+    
+    &__left-side-corner
+    &__right-side-corner
+      border-bottom-width: 60px

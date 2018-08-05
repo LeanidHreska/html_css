@@ -12,7 +12,7 @@
   <body>
     <header class="header">
       <div class="header__background-blackout">
-        <nav class="navigation">
+        <nav class="navigation header__navigation">
           <div class="navigation__logo">
             <div class="navigation__B-letter">
               B
@@ -22,34 +22,39 @@
             </div>
           </div>
           <div class="navigation__menu">
-            <button class="navigation__button">
-              Home
-            </button>
-            <button class="navigation__button">
-              About us
-            </button>
-            <button class="navigation__button">
-              Portfolio
-            </button>
-            <button class="navigation__button">
-              Pricing
-            </button>
-            <button class="navigation__button">
-              Team
-            </button>
-            <button class="navigation__button">
-              Blog
-            </button>
-            <button class="navigation__button">
-              Contacts
-            </button>
+            <div class="navigation__burger">
+              <i class="fas fa-bars"></i> 
+            </div>
+            <div class="navigation__menu-wrapper">
+              <button class="navigation__button">
+                Home
+              </button>
+              <button class="navigation__button">
+                About us
+              </button>
+              <button class="navigation__button">
+                Portfolio
+              </button>
+              <button class="navigation__button">
+                Pricing
+              </button>
+              <button class="navigation__button">
+                Team
+              </button>
+              <button class="navigation__button">
+                Blog
+              </button>
+              <button class="navigation__button">
+                Contacts
+              </button>
+            </div>
           </div>
         </nav>
         <div class="slider">
-          <div class="slider__arrow">
+          <button class="slider__arrow slider__arrow_left">
             <i class="fas fa-angle-left"></i>
-          </div>
-          <div>
+          </button>
+          <div class="slider__content">
             <p class="slider__sub-title">
               Our Clients Are Our First Priority
             </p>
@@ -61,25 +66,25 @@
               <div class="slider__red-circle"> </div>
               <div class="slider__white-stripe"></div>
             </div> 
-            <div class="slider__content">
+            <div class="slider__sub-content">
               <div class="">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
               </div>
               <div class="slider__buttons">
-                <button class="slider__button">
+                <button class="slider__button slider__button_margin-right">
                   Get started now
                 </button>
-                <button class="slider__button">
+                <button class="slider__button slider__button_margin-left">
                   Learn more
                 </button>
               </div>
             </div>
           </div>
-          <div class="slider__arrow">
+          <button class="slider__arrow slider__arrow_right">
             <i class="fas fa-angle-right"></i>
-          </div>
+          </button>
           </div>
         </div>
       </div>
@@ -90,61 +95,64 @@
       </div>
     </header>
     <section class="who-we-are"> 
-      <div class="who-we-are__item">
-        <div class="who-we-are__icon-box">
-          <i class="fas fa-glasses who-we-are__icon"></i>
-        </div><br>
-        <div class="who-we-are__item-title">
+      <div class="item">
+        <div class="item__icon-box">
+          <i class="fas fa-glasses item__icon"></i>
+        </div>
+        <div class="item__title">
           Sleek design
         </div>
-        <div class="who-we-are__item-stripe"></div>
-        <span class="who-we-are__item-description">
+        <div class="item__divider"></div>
+        <span class="item__description">
           Lorem Ipsum is simply dummy text of the printing and typesetting let.
           Lorem Ipsum has been the industry.
         </span>
       </div>
-      <div class="who-we-are__item">
-        <div class="who-we-are__icon-box">
-          <i class="far fa-heart who-we-are__icon"></i>
-        </div><br>
-        <div class="who-we-are__item-title">
+      <div class="item">
+        <div class="item__icon-box">
+          <i class="far fa-heart item__icon"></i>
+        </div>
+        <div class="item__title">
           Clean code
         </div>
-        <div class="who-we-are__item-stripe"></div>
-        <span class="who-we-are__item-description">
+        <div class="item__divider"></div>
+        <span class="item__description">
           Lorem Ipsum is simply dummy text of the printing and typesetting let.
           Lorem Ipsum has been the industry.
         </span>
       </div>
-      <div class="who-we-are__item">
-        <div class="who-we-are__icon-box">
-          <i class="far fa-lightbulb who-we-are__icon"></i>
-        </div><br>
-        <div class="who-we-are__item-title">
+      <div class="item">
+        <div class="item__icon-box">
+          <i class="far fa-lightbulb item__icon"></i>
+        </div>
+        <div class="item__title">
           Creative ideas
         </div>
-        <div class="who-we-are__item-stripe"></div>
-        <span class="who-we-are__item-description">
+        <div class="item__divider"></div>
+        <span class="item__description">
           Lorem Ipsum is simply dummy text of the printing and typesetting let.
           Lorem Ipsum has been the industry.
         </span>
       </div>
-      <div class="who-we-are__item">
-        <div class="who-we-are__icon-box">
-          <i class="far fa-comments who-we-are__icon"></i>
-        </div><br>
-        <div class="who-we-are__item-title">
+      <div class="item">
+        <div class="item__icon-box">
+          <i class="far fa-comments item__icon"></i>
+        </div>
+        <div class="item__title">
           Free support
         </div>
-        <div class="who-we-are__item-stripe"></div>
-        <span class="who-we-are__item-description">
+        <div class="item__divider"></div>
+        <span class="item__description">
           Lorem Ipsum is simply dummy text of the printing and typesetting let.
           Lorem Ipsum has been the industry.
         </span>
       </div>
     </section>
     <section class="about-us">
-      <img class="about-us__image" src="images/about-us__monitor.png" alt="monitor">
+      <picture>
+        <source media="(max-width: 1200px)" srcset="images/about-us__monitor-min.png">
+        <img src="images/about-us__monitor.png" class="about-us__image" alt="monitor">
+      </picture>
       <div class="about-us__content">
         <div class="about-us__title">
           Our history
@@ -160,7 +168,7 @@
           sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
           Aldus PageMaker including versions of Lorem Ipsum.
         </div>
-        <button class="button button_bg-color-red">
+        <button class="about-us__button">
           Browse our work
         </button>
       </div>

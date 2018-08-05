@@ -1,0 +1,120 @@
+@import "../main.styl"
+
+.navigation
+  width: $page-width
+  display: flex
+  flex-wrap: wrap
+  color: $color-white
+
+  &__logo
+    display: inline-block
+    border: 2px solid $color-white
+    font-size: $h2-font-size
+    font-family: $font-family-arial
+    height 50px
+    width: 160px
+    margin-left: 35px
+
+  &__B-letter, &__other-letters
+    display: inline-block
+    padding: 5px 10px
+
+  &__B-letter
+    background-color: $color-white
+    color: $color-dark-gray
+    padding-left: 15px
+    padding-right: 15px
+
+  &__menu
+    margin-left: auto
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%
+    position: relative
+
+  &__burger
+    display: none
+
+  &__menu-wrapper
+    display: inline-flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    font-family: $font-family-arial
+    font-size: $h6-font-size
+
+  &__button
+    background-color: transparent
+    border: none
+    transition: color .2s ease-in-out, border-bottom .2s ease-in-out, .3s linear
+    border-bottom: 2px solid transparent
+    padding: 5px 0
+    outline: none
+    color: $color-white
+    text-transform: uppercase
+
+    &:hover, &:focus
+      color: $color-red
+      cursor: pointer
+      border-bottom: 2px solid $color-red
+
+@media screen and (max-width: $md)
+  .navigation
+    width: 90%
+ 
+@media screen and (max-width: $sm) 
+  .navigation
+    flex-direction: column
+
+    &__menu
+      margin: 10px 0
+      width: 100%
+
+    &__logo
+      margin-left: 0
+
+@media screen and (max-width: $xs)
+  .navigation
+    flex-direction: row
+    width: 90%
+
+    &__burger
+      display: block
+      transition: color .2s ease-in, transform .4s ease-in-out
+      font-size: $h2-font-size
+      text-align: center
+      line-height: 50px
+
+    &__menu
+      margin: 0 0 0 auto;
+      width: 40%
+      justify-content: flex-start
+
+      &:hover
+        for item in 1 2 3 4 5 6 7
+          .navigation__button:nth-child({item})
+            transform: (translateY(30px * item))
+
+        .navigation__menu-wrapper
+          opacity: 1
+
+        .navigation__burger
+          color: $color-red
+          transform: rotate(270deg)
+
+    &__menu-wrapper
+      flex-direction: column
+      align-items: center
+      position: relative
+      opacity: 0
+      transition: .3s linear
+      font-size: $h5-font-size
+      min-height: 240px
+
+    &__button
+      width: fit-content
+      position: absolute
+      top: 0
+
+
