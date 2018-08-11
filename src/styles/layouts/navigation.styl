@@ -1,37 +1,46 @@
 @import "../main.styl"
 
+$navigation-font-size = 15px
+$logo-font-size = 38px
+
 .navigation
   width: $page-width
   display: flex
   flex-wrap: wrap
-  color: $color-white
+  color: $color-title
+  font-size: $navigation-font-size
+  font-family: $font-family-text
 
   &__logo
-    display: inline-block
-    border: 2px solid $color-white
-    font-size: $h2-font-size
-    font-family: $font-family-arial
-    height 50px
-    width: 160px
+    display: flex;
+    align-items: center;
+    border: 2px solid $color-title
+    border-bottom-width: 4px
+    border-right-width: 4px
+    font-size: $logo-font-size
+    height: fit-content
+    width: fit-content
     margin-left: 35px
+    font-weight: 100
 
   &__B-letter, &__other-letters
-    display: inline-block
-    padding: 5px 10px
+    padding: 4px 10px
 
   &__B-letter
-    background-color: $color-white
-    color: $color-dark-gray
-    padding-left: 15px
-    padding-right: 15px
+    display: inline-block
+    background-color: $color-title
+    color: #4a4c55
+    padding-left: 12px
+    padding-right: 12px
+    font-weight: bold
 
   &__menu
-    margin-left: auto
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%
-    position: relative
+    width: 59%
+    position: relative;
+    left: 306px;
 
   &__burger
     display: none
@@ -40,28 +49,31 @@
     display: inline-flex
     width: 100%
     justify-content: space-between
-    align-items: center
-    font-family: $font-family-arial
-    font-size: $h6-font-size
+    margin-top: 7px
 
   &__button
     background-color: transparent
     border: none
-    transition: color .2s ease-in-out, border-bottom .2s ease-in-out, .3s linear
+    transition: .2s
     border-bottom: 2px solid transparent
-    padding: 5px 0
+    padding: 10px 0 20px
     outline: none
-    color: $color-white
+    color: $color-title
     text-transform: uppercase
 
     &:hover, &:focus
-      color: $color-red
+      color: $color-element-primary
       cursor: pointer
-      border-bottom: 2px solid $color-red
+      border-bottom: 2px solid $color-element-primary
+      font-weight: bold;
 
 @media screen and (max-width: $md)
   .navigation
     width: 90%
+ 
+    &__menu
+      left: 0
+      margin-left: auto
  
 @media screen and (max-width: $sm) 
   .navigation
@@ -81,40 +93,16 @@
 
     &__burger
       display: block
-      transition: color .2s ease-in, transform .4s ease-in-out
+      transition: .2s
       font-size: $h2-font-size
-      text-align: center
+      text-align: right 
       line-height: 50px
-
+    
     &__menu
-      margin: 0 0 0 auto;
       width: 40%
-      justify-content: flex-start
-
-      &:hover
-        for item in 1 2 3 4 5 6 7
-          .navigation__button:nth-child({item})
-            transform: (translateY(30px * item))
-
-        .navigation__menu-wrapper
-          opacity: 1
-
-        .navigation__burger
-          color: $color-red
-          transform: rotate(270deg)
-
+      margin: 0
+      margin-left: auto
+    
     &__menu-wrapper
-      flex-direction: column
-      align-items: center
-      position: relative
-      opacity: 0
-      transition: .3s linear
-      font-size: $h5-font-size
-      min-height: 240px
-
-    &__button
-      width: fit-content
-      position: absolute
-      top: 0
-
+      display: none
 

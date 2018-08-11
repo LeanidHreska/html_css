@@ -17,7 +17,7 @@ $anchor-small-size = 50px
   &__left-side-corner, &__right-side-corner
     position: absolute
     bottom: 0
-    border-bottom: 124px solid $color-white
+    border-bottom: 124px solid $color-title
 
 
   &__left-side-corner
@@ -30,32 +30,33 @@ $anchor-small-size = 50px
   &__anchor
     height: $anchor-size 
     width: $anchor-size 
-    background-color: $color-gray-light
+    background-color: $color-element-bg
     position: absolute
     bottom: -($anchor-size / 2)
     left: "calc(50vw - (%s / 2))" % $anchor-size
     background-clip: padding-box
     border: 2px solid rgba(255, 255, 255, 0.3)
     border-radius: 50%
-    color: $color-red
+    color: $color-element-primary
     transition: color .2s ease-in-out, background-color .2s ease-in-out
     font-size: $h3-font-size
     text-align: center
     line-height: $anchor-size 
 
   &__anchor:hover
-    color: $color-white
-    background-color: $color-red
+    color: $color-title
+    background-color: $color-element-primary
     cursor: pointer
   
   &__navigation
     margin: 40px auto 0
 
   &__slider
-    margin-top: 205px
+    margin-top: 198px
 
 @media screen and (max-width: $md)
   .header
+    height: 720px
 
     &__anchor
       font-size: $h5-font-size
@@ -67,7 +68,7 @@ $anchor-small-size = 50px
 
 @media screen and (max-width: $xs)
   .header
-    
+
     &__left-side-corner
     &__right-side-corner
       border-bottom-width: 60px

@@ -1,0 +1,31 @@
+@import "variables.styl"
+
+$button-font-size = 14px
+$color-button-secondary = $color-element-primary
+
+.button
+  outline: none;
+  height: 50px;
+  width: 225px;
+  background-color: transparent;
+  color: $color-title;
+  border: 1px solid $color-title;
+  border-radius: 2px;
+  transition: .2s ease-in-out;
+  text-transform: uppercase;
+  font-family: $font-family-text
+  font-weight: bold;
+  font-size: $button-font-size
+
+  &:focus
+  &:hover
+    border-color: $color-element-primary
+    background-color: $color-element-primary
+    cursor: pointer
+
+  &--secondary
+    background-color: $color-button-secondary
+
+    &:hover
+    &:focus
+      background-color: darken($color-element-primary, 15%)

@@ -2,6 +2,9 @@
 
 $transition = .3s ease-in-out
 
+$color-title = #6a6a6a
+$color-text = #999999
+
 .who-we-are 
   min-height: 440px
   width: $page-width
@@ -25,9 +28,9 @@ $transition = .3s ease-in-out
     display: inline-block
     height: 70px
     width: 70px
-    border: 1px solid $color-gray-light
-    color: $color-red
-    font-size: $h4-font-size
+    border: 1px solid $color-element-bg
+    color: $color-element-primary
+    font-size: $h3-font-size
     margin-bottom: 30px
     transition: $transition
     line-height: 70px
@@ -36,10 +39,10 @@ $transition = .3s ease-in-out
     transition: $transition
 
   &__title
-    font-family: $font-family-open-sans
+    font-family: $font-family-text
     font-size: $h4-font-size
     text-transform: uppercase
-    color: $color-dark-gray
+    color: $color-title
     transition: color $transition
 
   &__divider
@@ -49,16 +52,16 @@ $transition = .3s ease-in-out
     margin: 15px auto
 
   &__description
-    font-family: $font-family-sans-pro
+    font-family: $font-family-title
     font-size: $h6-font-size
-    color: $color-gray
+    color: $color-text
 
   &:hover
     .item__title
-      color: $color-red
+      color: $color-element-primary
 
     .item__icon-box
-      border-color: $color-red
+      border-color: $color-element-primary
       transform: rotate(-45deg)
     
     .item__icon

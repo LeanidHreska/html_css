@@ -1,16 +1,19 @@
 @import "../main.styl"
 
+$color-title = #6a6a6a
+$color-text = #999999
+
 .about-us
   width: $page-width
   margin: 0 auto
   display: flex
   justify-content: space-between
   align-items: center
-  font-family: $font-family-sans-pro
+  font-family: $font-family-title
   min-height: 700px
 
   &__image
-    margin: 0 20px
+    margin-left: 40px
 
   &__content
     width: 50%
@@ -20,8 +23,8 @@
     justify-content: space-between
 
   &__title
-    border-left: 5px solid $color-red
-    color: $color-gray
+    border-left: 5px solid $color-element-primary
+    color: $color-title
     text-transform: uppercase
     font-size: $h2-font-size
     padding-left: 27px
@@ -29,28 +32,17 @@
     font-weight: bold
 
   &__text
-    color: lighten($color-gray, 10%)
+    color: $color-text
     line-height: 2
     margin: 10px 0
-
-  &__button
-    button()
-    color: $color-gray
-    background-color: transparent
-    border: 1px solid $color-gray
-
-    &:hover
-      background-color: $color-red
-      color: $color-white
-      cursor: pointer
 
 @media (max-width: $md)
   .about-us
     flex-direction: column
     min-height: 500px
-
+    width: $page-width-mobile
+    
     &__content
       margin-top: 20px
       width: 100%;
-
 
