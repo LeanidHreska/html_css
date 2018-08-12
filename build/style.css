@@ -468,6 +468,9 @@ template {
     min-height: 500px;
     width: 90%;
   }
+  .about-us__title {
+    font-size: 27px;
+  }
   .about-us__content {
     margin-top: 20px;
     width: 100%;
@@ -695,7 +698,9 @@ template {
     display: block;
     transition: 0.2s;
     font-size: 36px;
-    text-align: right;
+    width: fit-content;
+    position: absolute;
+    right: 0;
     line-height: 50px;
   }
   .navigation__menu {

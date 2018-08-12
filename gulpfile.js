@@ -17,6 +17,13 @@ gulp.task('buildStyles', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('js', function () {
+  return gulp.src(['src/scripts/*.js'])
+    .pipe(plumber())
+    .pipe(concat('index.js'))
+    .pipe(gulp.dest('build'))
+});
+
 gulp.task('html', function () {
   return gulp.src('src/index.html')
     .pipe(concat('index.html'))
@@ -29,8 +36,6 @@ gulp.task('image', function () {
     .pipe(image())
     .pipe(gulp.dest('build/images'));
 });
- 
-
 
 var config = {
     server: {
@@ -47,8 +52,8 @@ gulp.task('webserver', function () {
 
 gulp.task('watch', function(){
     watch('src/', function(event, cb) {
-        gulp.start(['html', 'buildStyles', 'image']);
+        gulp.start(['html', 'buildStyles', 'js', 'image']);
     });
 });
 
-gulp.task('default', ['html', 'buildStyles', 'image', 'webserver', 'watch']);
+gulp.task('default', ['html', 'buildStyles', 'js', 'image', 'webserver', 'watch']);
