@@ -44,6 +44,10 @@ $logo-font-size = 38px
 
   &__burger
     display: none
+  
+  &__home
+    display: none
+    font-size: $h2-font-size
 
   &__menu-wrapper
     display: inline-flex
@@ -90,6 +94,7 @@ $logo-font-size = 38px
   .navigation
     flex-direction: row
     width: 90%
+    margin-top: 10px
 
     &__burger
       display: block
@@ -100,11 +105,39 @@ $logo-font-size = 38px
       right: 0;
       line-height: 50px
     
+    &__home
+      display: flex
+      position: absolute
+      right: 15px
+      top: 15px
+      transition: .4s
+      
+      &:hover
+        color: $color-element-primary 
+
     &__menu
       width: 40%
       margin: 0
       margin-left: auto
     
     &__menu-wrapper
-      display: none
+      display: block
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: -1;
+      opacity: 0;
+      margin-top: 0
+      display: flex;
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      transition: .2s
 
+    &__button
+      font-size: $h3-font-size
+      margin: 8px 0
+      width: fit-content
