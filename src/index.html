@@ -23,7 +23,7 @@
             </span>
           </div>
           <div class="navigation__menu" id="headerMenu">
-            <div class="navigation__burger" onmouseover="handleClickMenu()">
+            <div class="navigation__burger" onClick="handleClickMenu()">
               <i class="fas fa-bars"></i>
             </div>
             <div class="navigation__menu-wrapper">
@@ -52,39 +52,43 @@
             </div>
           </div>
         </nav>
-        <div class="slider header__slider">
-          <button class="slider__arrow slider__arrow_left">
+        <div class="carousel header__carousel">
+          <button class="carousel__arrow carousel__arrow_left">
             <i class="fas fa-angle-left"></i>
           </button>
-          <div class="slider__content">
-            <p class="slider__sub-title">
-              Our Clients Are Our First Priority
-            </p>
-            <div class="slider__title">
-              Welcome to bino
-            </div>
-            <div class="slider__divider">
-              <div class="slider__white-stripe"></div>
-              <div class="slider__red-circle"> </div>
-              <div class="slider__white-stripe"></div>
-            </div> 
-            <div class="slider__sub-content">
-              <div class="">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </div>
-              <div class="slider__buttons">
-                <button class="button slider__button-left">
-                  Get started now
-                </button>
-                <button class="button slider__button-right">
-                  Learn more
-                </button>
-              </div>
-            </div>
+          <div class="carousel__frame">
+            <ul class="carousel__slides">
+              <li class="js_slide slide">
+                <p class="slide__sub-title">
+                  Our Clients Are Our First Priority
+                </p>
+                <div class="slide__title">
+                  Welcome to bino
+                </div>
+                <div class="slide__divider">
+                  <div class="slide__white-stripe"></div>
+                  <div class="slide__red-circle"> </div>
+                  <div class="slide__white-stripe"></div>
+                </div> 
+                <div class="slide__sub-content">
+                  <span class="slide__text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  </span>
+                  <div class="slide__buttons">
+                    <button class="button slide__button-left">
+                      Get started now
+                    </button>
+                    <button class="button slide__button-right">
+                      Learn more
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-          <button class="slider__arrow slider__arrow_right">
+          <button class="carousel__arrow carousel__arrow_right">
             <i class="fas fa-angle-right"></i>
           </button>
           </div>
@@ -175,6 +179,5 @@
         </button>
       </div>
     </section>
-    </div>
   </body>
 </html>

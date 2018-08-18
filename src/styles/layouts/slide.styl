@@ -1,0 +1,100 @@
+@import "../main.styl"
+
+$color-arrow = #3c352f
+$bg-color-arrow = #716b65
+
+$sub-content-font-size = 18px
+$sub-content-color = #a59f9a
+
+.slide
+  color: $color-title
+  text-align: center
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-direction: column
+  white-space: normal
+
+  &__sub-title
+    font-family: $font-family-title
+    font-size: $h3-font-size
+
+  &__title
+    font-family: $font-family-text
+    font-weight: bold
+    font-size: $h1-font-size
+    text-transform: uppercase
+    margin-top: 32px
+    letter-spacing: 6px
+
+  &__divider
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 35px 0 36px
+
+  &__red-circle
+    height: 10px
+    width: 10px
+    background-color: $color-element-primary
+    border-radius: 50%
+    margin: 0 10px
+
+  &__white-stripe
+    height: 1px
+    width: 5%
+    min-width: 80px
+    background-color: $color-title
+  
+  &__content
+    width: 85%
+
+  &__sub-content
+    width: 38%
+    margin: 0 auto
+    color: $sub-content-color
+    font-family: $font-family-title
+    font-size: $sub-content-font-size
+
+  &__text
+    white-space: normal
+
+  &__buttons
+    margin-top: 90px
+  
+  &__button-right
+    margin-left: 14px
+  
+  &__button-left
+    margin-right: 12px
+
+@media screen and (max-width: $md)
+  .slide
+
+    &__sub-content
+      width: 75%
+
+@media screen and (max-width: $sm)
+  .slide
+
+    &__title
+      font-size: $h2-font-size
+
+    &__sub-title
+      font-size: $h4-font-size
+
+    &__sub-content
+      width: 90%
+
+@media screen and (max-width: $xs)
+  .slide
+
+    &__sub-content
+      width: 85%
+
+    &__buttons
+      margin-top: 15px
+    
+    &__button-left
+    &__button-right
+      margin: 5px 0

@@ -1,0 +1,65 @@
+@import "../main.styl"
+
+$color-arrow = #3c352f
+$bg-color-arrow = #716b65
+
+$sub-content-font-size = 18px
+$sub-content-color = #a59f9a
+
+.carousel
+  color: $color-title
+  text-align: center
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+  &__frame
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+
+  &__slides
+    display: inline-block;
+    margin: 0
+  
+  li
+    position: relative;
+    display: inline-block;
+    width: 89.5vw;
+
+  &__arrow
+    font-size: $h3-font-size
+    color: $color-arrow
+    border: none
+    border-radius: 2px
+    background-color: $bg-color-arrow
+    position: relative
+    transition: .2s
+    height: 45px;
+    width: 45px
+    line-height: 45px
+    bottom: 52px
+
+    &_left
+      left: 26px
+    
+    &_right
+      right: 28px
+
+  &__arrow:hover
+  &__arrow:focus
+    background-color: $color-element-primary
+    color: $color-title
+    cursor: pointer
+    outline-color: $color-element-primary
+
+@media screen and (max-width: $xs)
+  .carousel
+    
+    &__frame
+      width: 100%
+
+    li
+      width: 83vw
+
