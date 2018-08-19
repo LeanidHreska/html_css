@@ -1,0 +1,151 @@
+@import "../main";
+
+$contacts-bg-color = #f4f5f9;
+$contacts-height = 1020px;
+$contacts-wrapper-height = 750px;
+
+$contacts-title-color = #6a6a6a;
+
+$contacts-text-color = #b9b9b9;
+
+$contacts-body-height = 570px;
+$contacts-body-padding = 74px 90px;
+
+.contacts
+  background-color: $contacts-bg-color
+  min-height: $contacts-height
+  display: flex;
+  align-items: center;
+  color: $contacts-text-color
+
+  /* bugfix due to problem with min-height and flexbox in IE */
+  &:after
+    content: ''
+    min-height: inherit
+    font-size: 0
+
+  &__wrapper
+    width: $page-width
+    min-height $contacts-wrapper-height
+    margin: 0 auto;
+
+  &__head
+    text-align: center
+  
+  &__title
+    font-family: $font-family-title
+    font-size: $h2-font-size
+    font-weight: bold
+    color: $contacts-title-color
+    margin: 5px 0
+
+  &__sub-title
+    font-family: $font-family-text
+    font-size: $h6-font-size
+    margin: 20px 0
+  
+  &__body
+    margin: 60px 35px 0
+    display: flex
+    justify-content: space-between
+
+.addresses
+  height: $contacts-body-height
+  padding: $contacts-body-padding
+  display: flex;
+  flex-direction: column;
+  max-width: 480px
+  background-color: #fff
+
+  &__title
+    font-family: $font-family-title
+    color: $color-element-primary
+    font-size: 24px
+    text-transform: uppercase
+    font-weight: bold
+
+    &_margin
+      margin-top: 70px
+
+  &__text
+    font-family: $font-family-text
+    font-size: $h5-font-size
+    margin: 0
+
+.form
+  height: $contacts-body-height
+  padding: 97px 100px;
+  background-color: #fff;
+  width: 670px
+  font-family: $font-family-text
+  font-size: $h6-font-size
+  color: $contacts-text-color
+
+  &__item
+    display: flex
+    flex-direction: column
+
+    &_margin
+      margin-top: 30px
+
+  &__label
+    float: left
+    transition: .3s
+    order: 1
+
+  &__input
+    width: 100%;
+    outline: none;
+    border: none;
+    color: darken($contacts-text-color, 20%)
+    border-bottom: 1px solid $contacts-text-color
+    transition: .3s
+    order: 2
+
+    &_textarea
+      height: 97px
+
+    &:hover
+    &:focus
+      border-color: $color-element-primary
+
+      & + .form__label
+        color: $color-element-primary
+
+  &__submit
+    margin-top: 30px;
+    width: 160px;
+
+@media screen and (max-width: $md)
+  .contacts
+    
+    &__wrapper
+      width: $page-width-md
+
+@media screen and (max-width: $sm)
+  .contacts
+
+    &__wrapper
+      margin-top: 50px
+      width: $page-width-mobile
+
+
+  .addresses
+    padding: 20px
+    margin: 0 auto
+    height: 450px
+
+  .form
+    margin-top: 20px
+    height: 430px
+    width: 100%
+    padding: 20px
+
+@media screen and (max-width: $xs)
+  .contacts
+
+    &__body
+      margin-left: 0
+      margin-right: 0
+
+

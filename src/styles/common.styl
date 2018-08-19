@@ -29,3 +29,24 @@ $color-button-secondary = $color-element-primary
     &:hover
     &:focus
       background-color: darken($color-element-primary, 15%)
+
+.divider
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__red-circle
+    height: 10px
+    width: 10px
+    background-color: $color-element-primary
+    border-radius: 50%
+    margin: 0 10px
+
+  &__white-stripe
+    height: 1px
+    width: 5%
+    min-width: 80px
+    background-color: $color-title
+
+    &_additional
+      background-color: #b9b9b9;

@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Strict</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel='stylesheet' href='style.css'>
@@ -65,11 +65,11 @@
                 <div class="slide__title">
                   Welcome to bino
                 </div>
-                <div class="slide__divider">
-                  <div class="slide__white-stripe"></div>
-                  <div class="slide__red-circle"> </div>
-                  <div class="slide__white-stripe"></div>
-                </div> 
+                <div class="divider slide__divider">
+                  <div class="divider__white-stripe"></div>
+                  <div class="divider__red-circle"> </div>
+                  <div class="divider__white-stripe"></div>
+                </div>
                 <div class="slide__sub-content">
                   <span class="slide__text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -177,6 +177,84 @@
         <button class="button button--secondary about-us__button">
           Browse our work
         </button>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <div class="contacts__head">
+          <p class="contacts__title">
+            KEEP IN TOUCH
+          </p>
+          <p class="contacts__sub-title">
+            Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna susopit dictum quan nec
+          </p>
+          <div class="divider slide__divider">
+            <div class="divider__white-stripe divider__white-stripe_additional"></div>
+            <div class="divider__red-circle"> </div>
+            <div class="divider__white-stripe divider__white-stripe_additional"></div>
+          </div>
+        </div>
+        <div class="contacts__body">
+          <div class="addresses">
+            <div>
+              <p class="addresses__title">
+                our address
+              </p>
+              <p class="addresses__text">
+                House #13, Streat road, Sydney  2310 Australia
+              </p>
+            </div>
+            <div>
+              <p class="addresses__title addresses__title_margin">
+                call us
+              </p>
+              <p class="addresses__text">
+                + 880 168 109 1425
+              </p>
+              <p class="addresses__text">
+                + 0216809142
+              </p>
+            </div>
+            <div>
+              <p class="addresses__title addresses__title_margin">
+                Email us
+              </p>
+              <p class="addresses__text">
+                contactus@email.com
+              </p>
+            </div>
+          </div>
+          <form class="form">
+            <div class="form__item">
+              <input type="text" id="name" class="form__input">
+              <label for="name" class="form__label">
+                Name
+              </label>
+            </div>
+            <div class="form__item form__item_margin">
+              <input type="email" id="email" class="form__input">
+              <label for="email" class="form__label">
+                Email
+              </label>
+            </div>
+            <div class="form__item form__item_margin">
+              <input type="text" id="subject" class="form__input">
+              <label for="subject" class="form__label">
+                Subject
+              </label>
+            </div>
+            <div class="form__item form__item_margin">
+              <textarea id="message" class="form__input form__input_textarea">
+                </textarea>
+              <label for="message" class="form__label">
+                Message
+              </label>
+            </div>
+            <button type="submit" class="button button--secondary form__submit">
+              Send message
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   </body>

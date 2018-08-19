@@ -12,14 +12,13 @@ $logo-font-size = 38px
   font-family: $font-family-text
 
   &__logo
-    display: flex;
-    align-items: center;
+    display: flex
+    width: 140px
+    align-items: center
     border: 2px solid $color-title
     border-bottom-width: 4px
     border-right-width: 4px
     font-size: $logo-font-size
-    height: fit-content
-    width: fit-content
     margin-left: 35px
     font-weight: 100
 
@@ -33,6 +32,7 @@ $logo-font-size = 38px
     padding-left: 12px
     padding-right: 12px
     font-weight: bold
+    height: 100%
 
   &__menu
     display: flex;
@@ -73,7 +73,7 @@ $logo-font-size = 38px
 
 @media screen and (max-width: $md)
   .navigation
-    width: 90%
+    width: $page-width-mobile
  
     &__menu
       left: 0
@@ -93,7 +93,6 @@ $logo-font-size = 38px
 @media screen and (max-width: $xs)
   .navigation
     flex-direction: row
-    width: 90%
     margin-top: 10px
 
     &__burger

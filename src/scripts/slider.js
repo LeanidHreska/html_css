@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   const arrows = carousel.getElementsByClassName('carousel__arrow');
-  arrows[0].addEventListener('click', () => carouselSwitcher.prev());
-  arrows[1].addEventListener('click', () => carouselSwitcher.next());
+  arrows[0].addEventListener('click', function() { carouselSwitcher.prev() });
+  arrows[1].addEventListener('click', function() { carouselSwitcher.next() });
 });
