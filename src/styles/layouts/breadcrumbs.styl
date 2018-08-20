@@ -1,0 +1,31 @@
+@import "../main";
+
+$breadcrumbs-color =#b9b9b9;
+
+.breadcrumbs
+  display: flex
+  color: $breadcrumbs-color
+  justify-content: space-around
+
+  &__item
+    font-family: $font-family-title
+    font-size: $h6-font-size
+    transition: .3s
+    text-transform: uppercase
+    outline: none
+    background-color: transparent
+    border: none
+    padding: 0
+    color: $breadcrumbs-color
+    letter-spacing: 1px
+    white-space: nowrap
+
+    &:focus,
+    &:hover
+      color: $color-element-primary
+
+  &__slash
+    font-size: $h6-font-size
+    margin: 2px 5px
+    position: relative
+    top: 2px

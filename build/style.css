@@ -445,6 +445,35 @@ template {
   }
 }
 
+.breadcrumbs {
+  display: flex;
+  color: #b9b9b9;
+  justify-content: space-around;
+}
+.breadcrumbs__item {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #b9b9b9;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.breadcrumbs__item:focus,
+.breadcrumbs__item:hover {
+  color: #e74c3c;
+}
+.breadcrumbs__slash {
+  font-size: 14px;
+  margin: 2px 5px;
+  position: relative;
+  top: 2px;
+}
+
 .carousel {
   color: #fff;
   text-align: center;
@@ -857,6 +886,28 @@ template {
     margin: 8px 0;
     width: fit-content;
   }
+}
+
+.portfolio {
+  text-align: center;
+}
+.portfolio__title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #6a6a6a;
+  margin: 5px 0;
+  letter-spacing: 3px;
+}
+.portfolio__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 20px 0 0px;
+  color: #b9b9b9;
+}
+.portfolio__breadcrumbs {
+  margin: 56px auto;
+  width: 37%;
 }
 
 .slide {
