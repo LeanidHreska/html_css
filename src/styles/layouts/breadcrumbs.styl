@@ -4,6 +4,7 @@ $breadcrumbs-color =#b9b9b9;
 
 .breadcrumbs
   display: flex
+  flex-wrap: wrap
   color: $breadcrumbs-color
   justify-content: space-around
 
@@ -29,3 +30,7 @@ $breadcrumbs-color =#b9b9b9;
     margin: 2px 5px
     position: relative
     top: 2px
+
+@media screen and (max-width: $xs)
+  .breadcrumbs
+    flex-direction: column

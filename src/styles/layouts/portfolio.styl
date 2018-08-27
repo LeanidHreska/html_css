@@ -21,5 +21,75 @@ $portfolio-text-color = #b9b9b9;
     color: $portfolio-text-color
 
   &__breadcrumbs
-    margin: 56px auto;
-    width: 37%;
+    margin: 56px auto 50px
+    width: 37%
+
+  &__image-block
+    display: flex
+    flex-wrap: wrap
+    line-height: 0
+
+
+.image-block
+  overflow: hidden
+  position: relative
+  width: 25%
+
+  &__image
+    max-width: 100%
+    transition: .5s
+
+  &__hover-block
+    width: 100%
+    height 100%
+    position: absolute
+    top: 0
+    left: 0
+    transform: translateX(-3000px)
+    background-color: rgba(231, 76, 60, 0.7)
+    transition: .3s
+    color: #fff
+    font-family: $font-family-title
+    padding: 10%
+    text-align: left
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    font-size: $h4-font-size
+    line-height: 1.25
+
+  &__title
+    text-transform: uppercase
+    font-weight: bold
+    margin: 25px 0 10px
+    letter-spacing: 3px
+
+  &__white-stripe
+    width: 13%
+    border-bottom: 5px solid #fff;
+
+  &:hover
+    .image-block__image
+      transform: scale(1.4);
+
+    .image-block__hover-block
+      transform: translateX(0)
+
+@media screen and (max-width: $md)
+  .image-block
+    &__image
+      width: 100%
+
+  .portfolio__breadcrumbs
+    width: 80%
+
+@media screen and (max-width $sm)
+  .portfolio
+    margin-top: 50px
+
+    &__breadcrumbs
+      width: 90%
+
+@media screen and (max-width: $xs)
+  .image-block
+    width: 50%
