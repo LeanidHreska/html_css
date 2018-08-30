@@ -478,6 +478,12 @@ template {
   .breadcrumbs {
     flex-direction: column;
   }
+  .breadcrumbs__item {
+    margin: 5px 0;
+  }
+  .breadcrumbs__slash {
+    display: none;
+  }
 }
 
 .carousel {
@@ -1062,6 +1068,39 @@ template {
   .slide__button-right {
     margin: 5px 0;
   }
+}
+
+.team {
+  background-image: url("images/team_background.jpg");
+  height: 740px;
+  position: relative;
+  overflow: hidden;
+}
+.team__content {
+  margin-top: 143px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #fff;
+}
+.team__title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.team__subtitle {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 25px 0 29px;
+}
+.team__divider {
+  margin: 0;
+}
+.team__svg-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .who-we-are {
