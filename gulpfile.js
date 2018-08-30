@@ -32,7 +32,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('image', function () {
-  gulp.src(['src/images/*', 'src/images/**/*.jpg'])
+  gulp.src(['src/images/*', 'src/images/**/*.jpg', 'src/images/**/*.png'])
     .pipe(image())
     .pipe(gulp.dest('build/images'));
 });

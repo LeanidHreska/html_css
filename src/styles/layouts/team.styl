@@ -2,6 +2,7 @@
 
 .team
   background-image: url('images/team_background.jpg')
+  background-size: cover
   height: 740px
   position: relative
   overflow: hidden
@@ -32,3 +33,142 @@
     width: 100%
     position: absolute
 
+  &__members
+    display: flex
+    justify-content: space-between
+    width: 66%;
+    margin: 100px auto 0;
+
+.team-member
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative;
+
+  &__image
+    width: 58px
+    height: 58px
+    border-radius: 50%
+    border: 4px solid $color-element-primary
+    transition: .3s
+    position: absolute
+    z-index: 2
+
+  &__content-wrapper
+    opacity: 0
+    transition: .3s
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__white-stripe
+    height 115px
+    width: 1px
+    background-color: #fff
+
+  &__name
+    font-size: $h2-font-size
+    font-family: $font-family-title
+    color: $color-element-primary
+    margin: 20px 0 10px;
+
+  &__role
+    color: #fff
+    font-family: $font-family-text
+
+  &_position-1
+    top: 90px
+
+  &_position-2
+    top: 40px
+
+  &_position-3
+    top: 35px
+
+  &_position-4
+    top: 70px
+  
+  &_position-5
+    top: 25px
+
+  &:hover
+    .team-member
+      &__image
+        width: 85px
+        height: 85px
+        box-shadow: 0px 0px 28px 0px rgba(0,0,0,0.75)
+        transform: translateY(-20px)
+      
+      &__content-wrapper
+        opacity: 1
+
+@media screen and (max-width: $md)
+  .team-member
+    
+    &_position-1
+      top: 130px
+
+    &_position-2
+      top: 90px
+
+    &_position-3
+      top: 60px
+
+    &_position-4
+      top: 40px
+    
+    &_position-5
+      top: 30px
+
+@media screen and (max-width: $sm)
+  .team__members
+    width: 90%
+
+  .team-member
+    &__name
+      font-size: $h3-font-size
+
+    &_position-1
+      top: 180px
+
+    &_position-2
+      top: 130px
+
+    &_position-3
+      top: 85px
+
+    &_position-4
+      top: 60px
+    
+    &_position-5
+      top: 40px
+
+@media screen and (max-width: $xs)
+  .team
+    height: 640px
+
+  .team__svg-wrapper
+    top: -100px
+
+  .team-member
+    
+    &__white-stripe
+      height: 70px
+    
+    &__name
+      margin: 10px 0
+
+    &_position-1
+      top: 90px
+
+    &_position-2
+      top: 60px
+
+    &_position-3
+      top: 35px
+
+    &_position-4
+      top: 15px
+    
+    &_position-5
+      top: -5px
