@@ -1,7 +1,7 @@
 function handleClickMenu() {
   const menu = document.getElementById('headerMenu');
   const menuWrapper = menu.getElementsByClassName('navigation__menu-wrapper')[0];
-  menuWrapper.style.zIndex = 2;
+  menuWrapper.style.zIndex = 3;
   menuWrapper.style.opacity = 1;
 }
 
