@@ -489,15 +489,12 @@ template {
 .carousel {
   color: #fff;
   text-align: center;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 .carousel__frame {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  width: 90%;
+  width: 100%;
 }
 .carousel__slides {
   display: inline-block;
@@ -506,7 +503,7 @@ template {
 .carousel li {
   position: relative;
   display: inline-block;
-  width: 89.5vw;
+  width: 100vw;
 }
 .carousel__arrow {
   font-size: 27px;
@@ -514,19 +511,20 @@ template {
   border: none;
   border-radius: 2px;
   background-color: #716b65;
-  position: relative;
-  transition: 0.2s;
+  position: absolute;
+  transition: outline-color 0.2s ease, color 0.2s ease, background-color 0.3s ease;
   height: 45px;
   width: 45px;
   line-height: 45px;
   bottom: 52px;
   z-index: 1;
+  top: 350px;
 }
 .carousel__arrow_left {
-  left: 26px;
+  left: 30px;
 }
 .carousel__arrow_right {
-  right: 28px;
+  right: 30px;
 }
 .carousel__arrow:hover,
 .carousel__arrow:focus {
@@ -534,14 +532,6 @@ template {
   color: #fff;
   cursor: pointer;
   outline-color: #e74c3c;
-}
-@media screen and (max-width: 767px) {
-  .carousel__frame {
-    width: 100%;
-  }
-  .carousel li {
-    width: 83vw;
-  }
 }
 
 .contacts {
@@ -998,10 +988,6 @@ template {
 .slide {
   color: #fff;
   text-align: center;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
   white-space: normal;
 }
 .slide__sub-title {

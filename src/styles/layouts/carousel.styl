@@ -9,15 +9,12 @@ $sub-content-color = #a59f9a
 .carousel
   color: $color-title
   text-align: center
-  display: flex
-  justify-content: space-around
-  align-items: center
 
   &__frame
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    width: 90%;
+    width: 100%;
 
   &__slides
     display: inline-block;
@@ -26,7 +23,7 @@ $sub-content-color = #a59f9a
   li
     position: relative;
     display: inline-block;
-    width: 89.5vw;
+    width: 100vw
 
   &__arrow
     font-size: $h3-font-size
@@ -34,19 +31,20 @@ $sub-content-color = #a59f9a
     border: none
     border-radius: 2px
     background-color: $bg-color-arrow
-    position: relative
-    transition: .2s
+    position: absolute
+    transition: outline-color .2s ease, color .2s ease, background-color .3s ease;
     height: 45px;
     width: 45px
     line-height: 45px
     bottom: 52px
     z-index: 1
+    top: 350px
 
     &_left
-      left: 26px
+      left: 30px;
     
     &_right
-      right: 28px
+      right: 30px
 
   &__arrow:hover
   &__arrow:focus
@@ -54,13 +52,4 @@ $sub-content-color = #a59f9a
     color: $color-title
     cursor: pointer
     outline-color: $color-element-primary
-
-@media screen and (max-width: $xs)
-  .carousel
-    
-    &__frame
-      width: 100%
-
-    li
-      width: 83vw
 
